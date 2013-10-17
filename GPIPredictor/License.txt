@@ -1,0 +1,103 @@
+  GPIPredictor is a predictor for the prediction of glycosylphosphatidylinositol 
+(GPI) lipid modification of a protein. It uses an optimized support vector machine 
+(SVM) classifier to recognize the C-terminal sequence pattern and uses a voting system
+based on SignalP version 3.0 to determine the presence or absence of the
+N-terminal signal of a typical GPI-anchored protein.
+
+
+Copyright (c) 2006-2009, Bioinformation Engineering Laboratory, 
+Graduate School of Agricultural and Life Science,
+University of Tokyo. All rights reserved.
+
+
+Academic License
+==========================================================================
+GPIPredictor is free of charge for public academic uses. 
+*NOTE*: The academic end-users must also agree the Copyrights and Distribution of "LIBSVM", see below.
+
+.
+---------------ACADEMIC SOFTWARE LICENSE AGREEMENT--------------------------
+Bioinformation Engineering Laboratory (BEL) has the right to license all copyrights and other property
+  rights in the Licensed Software identified as GPIPredictor and developed
+  by BEL and BEL desires to license the Software so that it becomes
+  available for public use and benefit. 
+
+LICENSEE is a public funded Academic and/or Education and/or
+Research Institution. 
+  
+LICENSEE must use the Software for internal research purposes only. 
+
+LICENSEE shall have the right to make copies of the Licensed Software
+  for internal use at the Site and for back-up purposes under this
+  Agreement, but agrees that all such copies shall contain the copyright
+  notices and all other reasonable and appropriate proprietary markings or
+  confidential legends that appear on the Licensed Software provided
+  hereunder. 
+
+BEL shall have no obligation to offer support services to LICENSEE, and
+  nothing contained herein shall be interpreted as to require BEL to
+  provide maintenance, installation services, version updates, debugging,
+  consultation or end-user support of any kind.
+
+------------------ End of ACADEMIC SOFTWARE LICENSE AGREEMENT----------------
+
+
+Commercial License
+===========================================================================
+This is the appropriate option if you are not a member of a publicly funded Academic 
+and/or Education and/or Research Institution you must obtain a commercial license.
+Please contact with BEL.
+ 
+Contact info
+---------------------
+By Post mail:
+Bioinformation Engineering Laboratory
+Graduate School of Agricultural and Life Science
+University of Tokyo.
+No.1-1-1 Yayoi Bukyo-ku, Tokyo, Japan. ZIP:113-8657
+
+or
+By email: 
+davecao@bi.a.u-tokyo.ac.jp
+
+GPIPredictor is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+
+
+Copyrights and Distribution of "LIBSVM"
+========================================================== 
+
+Copyright (c) 2000-2008 Chih-Chung Chang and Chih-Jen Lin
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+
+1. Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright
+notice, this list of conditions and the following disclaimer in the
+documentation and/or other materials provided with the distribution.
+
+3. Neither name of copyright holders nor the names of its contributors
+may be used to endorse or promote products derived from this software
+without specific prior written permission.
+
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR
+CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+
