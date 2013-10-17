@@ -58,8 +58,10 @@ No.1-1-1 Yayoi Bukyo-ku, Tokyo, Japan. ZIP:113-8657
 
 or
 By email: 
+Dr. Wei CAO
 davecao@bi.a.u-tokyo.ac.jp
-
+
+
 GPIPredictor is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 

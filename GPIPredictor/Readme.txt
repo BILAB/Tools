@@ -1,3 +1,5 @@
+Introduction
+=================================
 The files in this directory belong to the "GPIPredictor" package
 for the prediction of glycosylphosphatidylinositol(GPI) lipid 
 modification of a protein. 
@@ -115,3 +117,27 @@ GPI     : indicate whether the input protein is a GPI-anchored protein or not,
 	  where "Y" means it is and "N" means it is not. 
          *NOTE*
            GPI is "Y" only if both the "Cterm" item and the "Nterm" are  "Y".
+
+
+
+Contact & Cite information
+=================================
+Developer:  Dr. Wei CAO
+davecao@bi.a.u-tokyo.ac.jp
+
+Bioinformation Engineering Laboratory
+Graduate School of Agricultural and Life Science
+University of Tokyo.
+No.1-1-1 Yayoi Bukyo-ku, Tokyo, Japan. ZIP:113-8657
+
+Papers (peer reviewed) :
+1: Cao W, Maruyama J, Kitamoto K, Sumikoshi K, Terada T, Nakamura S, Shimizu K.
+Using a new GPI-anchored-protein identification system to mine the protein
+databases of Aspergillus fumigatus, Aspergillus nidulans, and Aspergillus oryzae.
+J Gen Appl Microbiol. 2009 Oct;55(5):381-93. 
+PubMed PMID: 19940384.
+
+2: Wei Cao, Sumikoshi K, Terada T, Nakamura S, Kitamoto K, Shimizu K, 
+Computational Protocol for Screening GPI-anchored Proteins, 
+Bioinformatics and Computational Biology Lecture Notes in Computer Science 2009 Jun; 5462, 164-175. 
+doi:10.1007/978-3-642-00727-9_17
