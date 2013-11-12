@@ -1,3 +1,38 @@
 INSTALLATIONS
 
-1. Install A Library for Support Vector Machines
+XBP_predictor require python2.7 and LIBSVM.
+
+You can use following links to install these programs and libraries.
+
+1. LIBSVM: http://www.csie.ntu.edu.tw/~cjlin/libsvm/
+2. python: http://www.python.org/
+
+Do the following command to make symbolic link to LIBSVM.
+
+ln -s LIBSVM_DIR/python XBP_predictor_DIR/svm
+
+
+USAGE
+
+This program can predict the lipid-binding protein or the sugar-binding protein.
+
+## Lipid-binding Protein Prediction Mode ##
+
+ $ python predict_kspec.py -model models/lipid_bind_pro_2spec.model -thr 0.153 -fname INPUTFASTA
+
+
+
+## Sugar-binding Protein Prediction Mode ##
+
+  * sugar binding protein prediction
+ 
+ $ python predict_kspec.py -model models/2spec.mono.d4.0.sugar.vec.model -thr 0.060 -fname INPUTFASTA
+
+  * acidic sugar binding protein prediction
+ 
+ $ python predict_kspec.py -model models/2spec.mono.d4.0.sugar.acd.vec.model -thr 0.308 -fname INPUTFASTA
+ 
+  * non acidic sugar binding protein prediction
+ 
+ $ python predict_kspec.py -model models/2spec.mono.d4.0.sugar.cluster1.vec.model -thr 0.078 -fname INPUTFASTA
+
