@@ -1,0 +1,5 @@
+*~
+*.log
+*.fasta
+*.swp
+.DS_Store
