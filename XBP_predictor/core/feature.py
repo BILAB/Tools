@@ -1,0 +1,86 @@
+#coding:utf-8
+from math import floor
+import aaindx
+import protdb
+import math
+
+def seq2frq(seq,letter = 3,aalist = None):
+	"""
+    >>> seq2frq('PTAVAVTFDLTATTTYGENIYLVGSISQLGDWETSDGIALSADKYTSSDPLWYVTVTLPAGESFEYKCTT')
+    None
+	"""
+	seq = seq.replace("B","X").replace("Z","X").replace("U","X")
+	
+	if aalist is None:
+		aalist = ['M','A','V','L','I','P',
+				  'F','W','C','G','S','T',
+				  'Y','N','Q','D','E','K',
+				  'R','H']
+
+	cnt = protdb.init_AA(letter,aalist)
+	pres = "+" * (letter - 1)
+	for i,res in enumerate(seq):
+		if res == 'X' or 'X' in pres:
+			continue
+		if res not in ['+','-'] and pres.count('+') == 0 and pres.count('-') == 0:
+			cnt[pres + res] += 1
+		pres = pres[1:] + res
+	return {i+1:cnt[key] for i,key in enumerate(sorted(cnt.keys())) if cnt[key] != 0}
+
+def seq2frq_mask(seq,letter = 3):
+	"""
+	>>> seq2frq_mask("X"*30,letter = 3)
+	None
+	"""
+	# B Z repalace to X
+	seq = seq.replace("B","X").replace("Z","X")
+	# masked [ALA ILE LEU PRO VAL] to X (Hydrophobic residue)
+	# masked [SER THR] to Z (Hydrophilic residue)
+	# masked [ARG LYS] to B (Baic residue)
+	# masked [ASP GLU] to A (Acidic residue)
+	mask_list = {"A":"X","I":"X","L":"X","P":"X","V":"X",
+				 "S":"Z","T":"Z",
+				 "R":"B","K":"B",
+				 "D":"A","E":"A",
+				 }
+	# sorted: For ALA and Acid
+	for res,mask in sorted(mask_list.items(),key=lambda x:x[0]):
+		seq = seq.replace(res,mask)
+	
+	aalist = ['M','F','W','C','G','X',
+			  "Z", #"S","T",
+			  'Y','N','Q',
+			  "A", #"D","E",
+			  "B",#"R","K",
+			  'H']
+	return seq2frq(seq,letter,aalist)
+
+"""
+def seq2aaindx(seq,id,null):
+    aa = aaindx.getAAindx(id)['aaindx']
+    aa.update({'+':null,'-':null})
+    return {i+1:aa[res] for i,res in enumerate(seq) if aa.has_key(res)}
+"""
+def seq2aaindx(seq,id,null):
+	# null is value of lack value.
+    aa = aaindx.getAAindx(id)['aaindx']
+    aa.update({'+':null,'-':null})
+    return {i+1:float(aa[res]) for i,res in enumerate(seq) if aa.has_key(res)}
+
+def seq2aaindx_sigmoid(seq,id):
+	sig = lambda x : 1/(1 + math.exp(float(x)))
+	null = -1
+	# null is value of lack value.
+	aa = aaindx.getAAindx(id)['aaindx']
+	aa.update({'+':null,'-':null})
+	return {i+1:sig(aa[res]) for i,res in enumerate(seq) if aa.has_key(res)}
+
+def seq2hyd(seq,null = 30):
+    hyd = protdb.kyte
+    hyd.update({'+':null,'-':null})
+    return {i+1:hyd[res] for i,res in enumerate(seq) if hyd.has_key(res)}
+
+
+if __name__ == "__main__":
+	import doctest
+	doctest.testmod()

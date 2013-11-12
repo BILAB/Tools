@@ -1,0 +1,21 @@
+**********************************************************************
+File "test.py", line 12, in __main__.getpos_fasta
+Failed example:
+    getpos_fasta(fname,answer).next()
+Expected:
+    None
+Got:
+    ('148lE', {32: 'L', 70: 'D', 104: 'F', 105: 'Q', 106: 'M', 107: 'G', 30: 'G', 31: 'H'})
+**********************************************************************
+File "test.py", line 28, in __main__.getpos_pdb
+Failed example:
+    getpos_pdb(fname,answer).next()
+Expected:
+    None
+Got:
+    ('3hdlA', {256: 'N', 3: 'Q', 4: 'I', 5: 'G', 8: 'N', 267: 'N', 269: 'T', 270: 'A', 144: 'N', 147: 'Q', 153: 'A', 154: 'N', 28: 'N', 29: 'N', 298: 'N', 300: 'S', 301: 'V', 56: 'D', 77: 'F', 211: 'N', 114: 'N', 118: 'Q'})
+**********************************************************************
+2 items had failures:
+   1 of   3 in __main__.getpos_fasta
+   1 of   3 in __main__.getpos_pdb
+***Test Failed*** 2 failures.
