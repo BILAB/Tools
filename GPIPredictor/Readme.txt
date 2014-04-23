@@ -53,6 +53,7 @@ SignalP v3.0 can be obtained from http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?s
   <format>short</format>
   <trunc>70</trunc>
 </signalp>
+<rpsblast></rpsblast>
 </gpisvm-config>  
 -------- End -------------------------
 
