@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="GPIPredictor" default="build-jar" basedir=".">
+	<property name="src" location="src"/> <!-- java source folder -->
+	<property name="bin" location="bin"/> <!-- intermediate build products -->
+	<property name="jars" location="jars"/> <!-- jar files -->
+	<property name="lib" location="lib"/> <!-- local libraries linked against -->
+	<property name="resources" location="resources"/> 
+        <!-- location of general java resources -->
+
+    <!-- Our products. JAR -->
+    <property name="jarfile" location="${jars}/${ant.project.name}.jar"/>
+  
+    <property name="compile.debug" value="true"/>
+
+	<!-- All JARs in the lib directory are merged into the final JAR file.  See the "jar" target
+	     if you don't want to do that. -->
+    <fileset id="lib.jars" dir="${lib}">
+        <include name="**/*.jar"/>
+    </fileset>
+
+    <path id="lib.path">
+        <fileset refid="lib.jars"/>
+    </path>
+    
+	<!-- Initialization target, for any prelimary setup needed to build -->
+	<target name="init" description="Preparation">
+		<mkdir dir="${lib}"/>
+		<mkdir dir="${bin}"/>
+		<mkdir dir="${jars}"/>
+	</target>
+
+    <target name="compile" depends="init" description="Compile code">
+        <javac srcdir="${src}" destdir="${bin}"
+            source="1.6" target="1.6"
+            includeAntRuntime="no"
+            classpathref="lib.path"
+            debug="${compile.debug}">
+        </javac>
+    </target>
+    
+    <target name="build-jar" depends="compile" description="Build jar">
+        <jar jarfile="${jarfile}"
+            basedir="${bin}"
+            manifest="${resources}/Manifest">
+            <!-- Merge library jars into final jar file -->
+            <zipgroupfileset refid="lib.jars"/>
+        </jar>
+    </target>
+
+    <target name="clean" description="Remove build and dist directories">
+        <delete dir="${bin}"/>
+        <delete dir="${jars}"/>
+    </target>
+</project>
