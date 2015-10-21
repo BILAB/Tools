@@ -3,8 +3,8 @@ import argparse
 from core import seq2feature
 from core import feature
 
-from svm import svm
-from svm import svmutil
+from libsvm import svm
+from libsvm import svmutil
 
 
 def k_spec(seq,k):
