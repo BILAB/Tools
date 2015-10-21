@@ -7,9 +7,8 @@ You can use following links to install these programs and libraries.
 1. LIBSVM: http://www.csie.ntu.edu.tw/~cjlin/libsvm/
 2. python: http://www.python.org/
 
-Do the following command to make symbolic link to LIBSVM.
-
-ln -s LIBSVM_DIR/python XBP_predictor_DIR/svm
+Replace the shared library of LIBSVM compiled on your OS platform (e.g., libsvm.so.2 on Linux)
+ stored in the directory libsvm
 
 
 USAGE
