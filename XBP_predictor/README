@@ -7,8 +7,8 @@ You can use following links to install these programs and libraries.
 1. LIBSVM: http://www.csie.ntu.edu.tw/~cjlin/libsvm/
 2. python: http://www.python.org/
 
-Replace the shared library of LIBSVM compiled on your OS platform (e.g., libsvm.so.2 on Linux)
- stored in the directory libsvm
+Place the shared library of LIBSVM compiled on your OS platform (e.g., libsvm.so.2 on Linux) 
+into the directory libsvm
 
 
 USAGE
