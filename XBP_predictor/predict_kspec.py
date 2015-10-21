@@ -32,7 +32,7 @@ if __name__ == "__main__":
 	labels,features = get_dataset(fname,2)
 	model = svmutil.svm_load_model(model)
 
-	plbl, pacc, pvals = svmutil.svm_predict([0]*len(features),features,model,"")
+	plbl, pacc, pvals = svmutil.svm_predict([0]*len(features),features,model,"options=-q")
 
 	for cnt,(prot_id,seq) in enumerate(seq2feature.parse_fasta(fname)):
 		pval = pvals[cnt][0]
